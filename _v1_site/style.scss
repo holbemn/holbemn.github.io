@@ -1,0 +1,517 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+	background: $white;
+  font: 16px/1.5 Georgia, "Times New Roman", serif;
+  color: $darkGray;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 660px;
+  width: 80%;
+  border-top: 1px solid $lightGray;
+  border-bottom: 1px solid $lightGray;
+  a {
+    text-decoration:underline;
+  }
+  article.post {
+    margin: 0 0 0 0;
+    padding: .25em 0 .25em 0;
+    width: 100%;
+  }
+  div.posts{
+    p {
+      margin: .5em 0;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 660px;
+  padding: 0 0;
+  width: 80%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", serif;
+  color: $darkerGray;
+  font-weight: bold;
+
+  line-height: 1.7;
+  margin: 1em 0 1em;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+    font-size: 110%;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-left: 0;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+    font-size: 100%;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-left: 0;
+    font-weight: 400;
+    font-style:italic;
+    line-height: normal;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  a {
+    color: inherit;
+  }
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  text-transform: uppercase;
+    font-size: 80%;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-left: 0;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+}
+
+p {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 1em 0;
+  word-spacing: .1em;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+	cursor: pointer;
+  &:hover, &:active {
+    color: #BEFFBE;
+  }
+}
+
+h6 {
+    text-transform: uppercase;
+      font-size: 110%;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 2rem 0;
+      font-weight: 400;
+      font-style: normal;
+      line-height: normal;
+    a {
+      color: inherit;
+    }
+  }
+
+
+ul, ol {
+  margin: 1em 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type:georgian;
+  margin: 1em 0;
+
+  li {
+    margin: 1em 0;
+  }
+}
+
+li {
+  margin: 1em 0;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  width: 90%;
+  max-width: 660px;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+.date {
+  font-style: normal;
+  font-size: 1em;
+  color: $gray;
+  line-height:normal;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: #BEFFBE;
+}
+::selection {
+  color: $black;
+  background: #BEFFBE;
+}
+
+div.pre {
+  background-color: #efefef;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  padding: 3%;
+  h1{
+    margin-top: 0;
+  }
+}
+
+pre {
+  font-size: inherit;
+}
+
+ul.share-buttons{
+  margin: 40px 0 30px 0;
+  list-style: none;
+  padding: 0 0 0 0;
+
+  img {
+    width: auto;
+    max-width: auto;
+  }
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+
+}
+
+.masthead {
+  padding: 20px 0 0 0;
+  word-spacing: .5rem;
+  }
+
+.site-info {
+  width: 100%;
+  max-width: 660px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:baseline;
+  flex-grow: 1;
+  word-spacing: .5rem;
+  div {
+    line-height:normal;
+  }
+}
+
+div.entry {
+  padding-bottom: .5em;
+  a {
+    text-decoration:underline;
+  }
+  p {
+    margin: 1.25em 0;
+  }
+}
+
+div.about {
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.site-name {
+  color: $darkGray;
+  cursor: pointer;
+
+  p {
+    line-height: 1;
+  }
+
+  a {
+    margin-left: 0;
+    margin-right: 0;
+    font-family: "Times New Roman", serif;
+    font-weight: 500;
+    font-size: 2.625em;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    line-height: 1;
+    word-spacing: .5rem;
+  }
+}
+
+.site-description {
+  font-family: "Times New Roman", serif;
+  color: $gray;
+  font-size: 112.5%;
+  word-spacing: -.05em;
+  margin: -15px .5rem 0 .5rem;
+}
+
+.navigation {
+  margin-left: auto;
+  display: inline-flex;
+  justify-content:center;
+  min-width: 244px;
+  margin-top: 15px;
+}
+
+nav {
+  font-family: "Times New Roman", serif;
+  font-size: 100%;
+  text-transform: uppercase;
+  word-spacing: .5em;
+
+  a {
+    color: $darkGray;
+    font-weight: 300;
+    letter-spacing: 0px;
+    }
+}
+
+//
+// .main
+//
+.stacks {
+
+  .post {
+    display: inline-flex;
+    align-items: baseline;
+    border-bottom: none;
+    padding-bottom: 0;
+    flex-direction: row;
+    flex-wrap:wrap;
+
+    a {
+      text-decoration: none;
+    }
+    h1 {
+      margin-right: .5rem;
+    }
+    .date {
+      font-size: .85em;
+      margin-top: 0;
+      margin-left: 0;
+    }
+    }
+  .posts > .post {
+    display:flex;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin: 1.1em 0;
+  }
+
+  .posts > .post:last-child {
+    padding-bottom: 1rem;
+    border-bottom: none;
+  }
+}
+
+.archive {
+  h1 {
+    margin-bottom: 0;
+  }
+  .post {
+    h1{
+      margin-top: 0;
+      margin-bottom: 0;
+      }
+    }
+  p {
+    margin-top: .75rem;
+    margin-bottom: 1.1em;
+  }
+}
+
+.posts > .post {
+  border-bottom: 1px solid $lightGray;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post {
+  display: inline-flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+  blockquote {
+    margin: 1em .8em;
+    border-left: 1px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 1em;
+    font-style: italic;
+    }
+  a {
+    text-decoration:none;
+    margin: 1em .0em 0 0;
+    }
+
+
+    .title {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction:row;
+      align-items:baseline;
+      margin: 0 0;
+    }
+
+    h1 {
+      margin: 1em .5em 0 0;
+    }
+    .date {
+      margin-left: auto;
+      font-size: .85em;
+      margin-top: .5em;
+    }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+.posttitle {
+  margin-bottom: 1.1rem;
+}
+
+.wrapper-footer {
+  margin: 0 auto;
+  background-color: $white;
+
+  .container {
+    padding: 0 0;
+  }
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";
+
+/* Medium screens */
+@media all and (max-width: 762px) {
+  .site-info {
+    justify-content: center;
+    }
+  .navigation {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    div.pre {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+}
+
+@media all and (max-width: 600px) {
+  .masthead {
+    padding: 10px 0 10px 0;
+    word-spacing: .5rem;
+    }
+  .stacks {
+    .post {
+      .date {
+        margin-left:auto;
+      }
+    }
+  }
+  div.pre{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  }
+
+/* Small screens */
+@media all and (max-width: 414px) {
+  .pre{
+    margin-left: 0;
+  }
+}

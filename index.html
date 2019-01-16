@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<style scoped>
+  .article__content { display: none; }
+</style>
+
+<div class="posts">
+  {% for post in site.posts limit:8%}
+    {% include post.html post=post %}
+  {% endfor %}
+</div>
+
+<article>
+	More articles <a href="/archive">in the archive &rarr;</a></article>

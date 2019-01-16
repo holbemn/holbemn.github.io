@@ -1,0 +1,24 @@
+<article>
+  	{% if post.title %}
+  		{% assign title = post.title %}
+  		{% assign excerpt = post.excerpt %}
+  		{% assign date = post.date %}
+  		{% assign url = post.url %}
+  		{% assign content = post.content %}
+  	{% else %}
+	  	{% assign title = page.title %}
+	  	{% assign excerpt = page.excerpt %}
+	  	 {% assign url = page.url %}
+  		{% assign date = page.date %}
+  		{% assign content = content %}
+  	{% endif %}
+
+  	<header>
+  		<div class="article__date">{{ date | date: "%B %d, %Y" }}</div>
+ 		<h1 class="article__title"><a href="{{ url }}">{{ title }}</a></h1>
+ 		<h2 class="article__excerpt">{{ excerpt }}</h2>
+ 	</header>
+ 	<div class="article__content">
+  		{{ content }}
+  	</div>
+</article>

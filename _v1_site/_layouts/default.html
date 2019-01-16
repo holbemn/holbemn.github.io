@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+
+    <link rel="shortcut icon" href="{{ site.url }}/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ site.url }}/images/favicon.ico" type="image/x-icon">
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead">
+          <div class="site-info">
+            <p class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></p>
+            <p class="site-description">{{ site.description }}</p>
+            <div class ="navigation">
+              <nav>
+                <a href="{{ site.baseurl }}/archive">Archive</a>
+                <a href="{{ site.baseurl }}/about">About</a>
+                <a href="{{ site.baseurl }}/resources">Resources</a>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="main">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+         <h4><a href="https://www.twitter.com/Holbemn" target="_blank">Follow Holbemn on the Twitter!</a></h4>
+         <h4><a href="{{site.baseurl}}/feed.xml" target="_blank">Invite Holbemn into your Atom/RSS Feed!</a></h4>
+        </footer>
+      </div>
+    </div>
+
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+  </body>
+</html>
